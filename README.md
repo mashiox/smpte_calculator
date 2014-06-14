@@ -3,10 +3,13 @@ smpte_calculator
 
 A calculator for finding dropframe timecodes
 
-Division Algorithm (a proof for DF timecodes)
+Division Algorithm (a proof for DF timecodes) 
 a = dq + r
+
 q = a div d = floor(a/d)
+
 r = a mod d
+
 The dropcode alorithm drops the first (zeroth) and second (first) frame from the time sequence.
 We must manipulate the division algorithm to `redefine` the quotient of some frame number when divided by 17982 (significance of 17982 unknown)
 We do this by keeping the remainder of a mod d the same and forcing the quotient to be zero when i should be 0 or 1, and the dividend to be by the remainder.
